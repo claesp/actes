@@ -24,7 +24,7 @@ type DashboardZonesAddPage struct {
 }
 
 func dashboardZonesAdd(w http.ResponseWriter, r *http.Request) {
-	p := DashboardZonesAddPage{Page: Page{Title: SiteTitle}, Title: "Add a New Zone"}
+	p := DashboardZonesAddPage{Page: Page{Title: SiteTitle, Tenet: "1"}, Title: "Add a New Zone"}
 	err := Template.ExecuteTemplate(w, "dashboardZonesAdd.html", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

@@ -35,11 +35,12 @@
 				</div>
 				<div class="page-main">
 					<h2>{{.Title}}</h2>
-					<form name="add_zone" method="post" action="/api/v1/web/dashboard/zones/add">
+					<form name="add_zone" method="post" action="/api/v1/web/dashboard/zones/add/">
 						<p>
-							<label for="domain">Domain</label>
+							<label for="zoneName">Domain</label>
 							<br>
-							<input type="text" name="domain" placeholder="example.com">
+							<input type="hidden" name="tenet" value="{{.Page.Tenet}}">
+							<input type="text" name="zoneName" placeholder="example.com">
 						</p>
 						<p><input type="submit" value="Add"></p>
 					</form>
